@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* переменные */
+/* миксы */
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +14,235 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.wrap {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.link {
+  text-decoration: none;
+  color: transparent;
+  transition: 0.3s;
+}
+.link:hover {
+  color: #3E9CDC;
+}
+
+.btn {
+  align-items: center;
+  text-transform: uppercase;
+  width: 183px;
+  padding: 15px 0;
+  background-color: #3E9CDC;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+/* header */
+header {
+  background-color: rgba(16, 16, 29, 0.8980392157);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.breadcrumbs-item {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15.6px;
+  color: #ffffff;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* offer */
+.offer {
+  background: #BBB;
+  background-image: url("../../assets/offer-pic.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 900px;
+  max-height: 100vh;
+}
+.offer-info {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.offer-info__heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57.6px;
+  color: #000;
+  text-transform: uppercase;
+  max-width: 780px;
+}
+.offer-info__heading-blue {
+  color: #3E9CDC;
+}
+.offer-info__advantages {
+  list-style-type: "-";
+}
+.offer-info__advantages__heading {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.offer-info__advantages-item {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  padding-left: 11px;
+}
+.offer-info__actions button:last-child {
+  margin-left: 30px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #6F6D7B;
+}
+
+/* order */
+.order {
+  background-color: #272733;
+  background-image: url(../../assets/order-bg.png);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.order-wrap {
+  padding: 120px 0 150px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.order__heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.order__heading-blue {
+  color: #3E9CDC;
+}
+.order__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #bbb;
+  text-align: center;
+}
+.order__stages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order__stages-item {
+  width: 209px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.order__stages-item p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  text-align: center;
+}
+.order form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.order form button {
+  width: 368px;
+}
+.order .form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.order .form select, .order .form input:not([type=range]) {
+  background-color: rgba(255, 255, 255, 0.8509803922);
+  padding: 12px 10px;
+}
+.order .form input:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* footer */
+footer {
+  background-color: #3D4050;
+  padding: 30px 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.6px;
+  color: #ffffff;
+}
+.footer__payments {
+  display: flex;
+  border-left: 1px solid #C3C3C3;
+  border-right: 1px solid #C3C3C3;
+  padding: 0 40px;
+  gap: 40px;
+}
+.footer__payments-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #C3C3C3;
+}
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.footer__links-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

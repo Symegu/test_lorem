@@ -1,0 +1,26 @@
+@mixin main-text ($weight: 400, $size: 13px, $height: 15.6px, $color: #ffffff) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+
+@mixin href () {
+    text-decoration: none;
+    color: transparent;
+    transition: 0.3s;
+    &:hover {
+        color: $blue;
+    }
+}
+
+@mixin btn ($width: 183px, $padding: 15px 0, $bg-color: $blue, $color: #fff, $border: 1px solid #FFFFFF) {
+    align-items: center;
+    text-transform: uppercase;
+    width: $width;
+    padding: $padding;
+    background-color: $bg-color;
+    color: $color;
+    border: $border;
+    border-radius: 4px;
+}

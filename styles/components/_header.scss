@@ -1,0 +1,27 @@
+header {
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.breadcrumbs {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    &-item {
+        @include main-text(600);
+        color: #fff;
+        text-transform: uppercase;
+    }
+}

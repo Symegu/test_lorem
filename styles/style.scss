@@ -1,10 +1,16 @@
+/* переменные */
+@import "_vars.scss";
+
+/* миксы */
+@import "_mixins.scss";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  body {
+body {
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
     margin: 0;
@@ -12,3 +18,29 @@
     flex-direction: column; 
     justify-content: space-between;
 }
+
+.wrap {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.link {
+    @include href();
+}
+
+.btn {
+    @include btn();
+}
+
+.list {
+    list-style-type: none;
+}
+
+/* header */
+@import "components/_header.scss";
+/* offer */
+@import "components/_offer.scss";
+/* order */
+@import "components/_order.scss";
+/* footer */
+@import "components/_footer.scss";

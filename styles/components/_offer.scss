@@ -1,0 +1,52 @@
+.offer {
+    background: #BBB;
+    background-image: url('../../assets/offer-pic.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 900px;
+    max-height: 100vh;
+
+    &-info {
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        &__heading {
+            @include main-text(700, 48px, 57.6px, #000);
+            text-transform: uppercase;
+            max-width: 780px;
+
+            &-blue {
+                color: $blue;
+            }
+
+        }
+
+        &__advantages {
+            list-style-type: "-";
+
+            &__heading {
+                @include main-text(700, 20px, 24px, #000);
+                margin-bottom: 10px;
+            }
+
+            &-item {
+                @include main-text(400, 20px, 24px, #000);
+                margin-bottom: 5px;
+                margin-left: 15px;
+                padding-left: 11px;
+            }
+        }
+
+        &__actions {
+            & button:last-child {
+                margin-left: 30px;
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #6F6D7B;
+            }
+        }
+    }
+}
