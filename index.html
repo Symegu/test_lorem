@@ -117,18 +117,72 @@
             </ul>
             <form action="#">
                 <div class="form">
-                    <select name="" id="">
-                        <option value="">Выберите тип системы</option>
-                        <option value="">Sed ut perspiciatis</option>
-                        <option value="">Nemo enim ipsam</option>
-                        <option value="">Et harum quidem</option>
-                        <option value="">Temporibus autem</option>
-                        <option value="">Itaque earum rerum</option>
-                    </select>
-                    <input type="email" placeholder="Ваш email">
-                    <input type="name" placeholder="Вашe имя">
-                    <input type="range">
-                    <input type="file">
+                    <div class="select">
+                        <div class="options__container">
+                            <div class="option">
+                                <input type="radio" name="type" id="type1" class="radio">
+                                <label for="type1">Sed ut perspiciatis</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type2" class="radio">
+                                <label for="type2">Nemo enim ipsam</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type3" class="radio">
+                                <label for="type3">Et harum quidem</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type4" class="radio">
+                                <label for="type4">Temporibus autem</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type5" class="radio">
+                                <label for="type5">Itaque earum rerum</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type6" class="radio">
+                                <label for="type6">6Sed ut perspiciatis</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type7" class="radio">
+                                <label for="type7">7Nemo enim ipsam</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type8" class="radio">
+                                <label for="type8">8Et harum quidem</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type9" class="radio">
+                                <label for="type9">9Temporibus autem</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="type" id="type10" class="radio">
+                                <label for="type10">10Itaque earum rerum</label>
+                            </div>
+                        </div>
+                        <div class="select__option">
+                            Выберите тип системы
+                            <svg width="9" height="6" viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.93375 1.51079C8.93375 1.43936 8.89803 1.359 8.84446 1.30543L8.39803 0.859C8.34446 0.805429 8.2641 0.769714 8.19268 0.769714C8.12125 0.769714 8.04089 0.805429 7.98732 0.859L4.47839 4.36793L0.969462 0.859C0.91589 0.805429 0.835533 0.769714 0.764105 0.769714C0.683748 0.769714 0.612319 0.805429 0.558748 0.859L0.112319 1.30543C0.0587475 1.359 0.0230331 1.43936 0.0230331 1.51079C0.0230331 1.58221 0.0587475 1.66257 0.112319 1.71614L4.27303 5.87686C4.3266 5.93043 4.40696 5.96614 4.47839 5.96614C4.54982 5.96614 4.63018 5.93043 4.68375 5.87686L8.84446 1.71614C8.89803 1.66257 8.93375 1.58221 8.93375 1.51079Z"/>
+                            </svg>    
+                        </div>
+                    </div>
+                    <input type="email" class="input__email" placeholder="Ваш email">
+                    <input type="name" class="input__name" placeholder="Вашe имя">
+                    <div class="range__container">
+                        <div class="range__value">
+                            <span>Sed ut perspiciatis, unde omnis iste natus</span>
+                            <span id="range-value">0%</span>
+                        </div>
+                        <input type="range" class="input__range" name="range" id="range" min="0" max="100" value="0">
+                    </div>
+                    <input type="file" class="input__file" id="file" name="file" multiple>
+                    <label for="file" class="input__file__label">
+                        <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.8125 4.60899L13.3304 1.12685C12.9174 0.713902 12.0915 0.36792 11.5 0.36792H1.50002C0.9085 0.36792 0.428589 0.847831 0.428589 1.43935V19.2965C0.428589 19.888 0.9085 20.3679 1.50002 20.3679H16.5C17.0915 20.3679 17.5714 19.888 17.5714 19.2965V6.43935C17.5714 5.84783 17.2255 5.02194 16.8125 4.60899ZM11.8572 1.88578C12.0469 1.95274 12.2366 2.05319 12.3148 2.13131L15.8081 5.62462C15.8862 5.70274 15.9866 5.89247 16.0536 6.08221H11.8572V1.88578ZM16.1429 18.9394H1.85716V1.79649H10.4286V6.43935C10.4286 7.03087 10.9085 7.51078 11.5 7.51078H16.1429V18.9394ZM4.7143 9.29649V10.0108C4.7143 10.2117 4.87055 10.3679 5.07145 10.3679H12.9286C13.1295 10.3679 13.2857 10.2117 13.2857 10.0108V9.29649C13.2857 9.0956 13.1295 8.93935 12.9286 8.93935H5.07145C4.87055 8.93935 4.7143 9.0956 4.7143 9.29649ZM12.9286 11.7965H5.07145C4.87055 11.7965 4.7143 11.9527 4.7143 12.1536V12.8679C4.7143 13.0688 4.87055 13.2251 5.07145 13.2251H12.9286C13.1295 13.2251 13.2857 13.0688 13.2857 12.8679V12.1536C13.2857 11.9527 13.1295 11.7965 12.9286 11.7965ZM12.9286 14.6536H5.07145C4.87055 14.6536 4.7143 14.8099 4.7143 15.0108V15.7251C4.7143 15.926 4.87055 16.0822 5.07145 16.0822H12.9286C13.1295 16.0822 13.2857 15.926 13.2857 15.7251V15.0108C13.2857 14.8099 13.1295 14.6536 12.9286 14.6536Z" fill="#272733"/>
+                        </svg>
+                        <p>Прикрепить файл</p>
+                    </label>
                 </div>
                 <button class="btn">Отправить</button>
             </form>
@@ -205,6 +259,8 @@
             </li>
         </ul>
     </footer>
+    <script src="./scripts/select.js"></script>
+    <script src="./scripts/range.js"></script>
 </body>
 
 </html>
