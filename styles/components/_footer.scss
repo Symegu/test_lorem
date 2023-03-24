@@ -13,6 +13,8 @@ footer {
 
     &__payments {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         border-left: 1px solid #C3C3C3;
         border-right: 1px solid #C3C3C3;
         padding: 0 40px;
@@ -27,7 +29,9 @@ footer {
     }
 
     &__links {
-        display: flex; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         gap: 40px;
         &-item {
