@@ -44,3 +44,18 @@ body {
 @import "components/_order.scss";
 /* footer */
 @import "components/_footer.scss";
+
+
+/*tablet*/
+@media (max-width: 1280px) {
+    .wrap {
+      max-width: calc(722px - 16px * 2);
+    }
+}
+  
+/*mobile*/
+@media (max-width: 700px) {
+    .wrap {
+        max-width: calc(342px - 16px * 2);
+    }
+}

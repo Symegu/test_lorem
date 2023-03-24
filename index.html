@@ -26,8 +26,15 @@
                         fill="#42A9ED" />
                 </svg>
             </a>
-            <nav>
-                <ul class="breadcrumbs">
+            <nav class="navbar">
+                <div class="navbar__burger" id="burger">
+                    <div class="navbar__burger__field">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <ul class="breadcrumbs" id="breadcrumbs">
                     <li><a href="#" class="breadcrumbs-item link">бизнес</a></li>
                     <li><a href="#" class="breadcrumbs-item link">о нас</a></li>
                     <li><a href="#" class="breadcrumbs-item link">цены</a></li>
@@ -115,48 +122,48 @@
                     <p>Excepteur sint occaecat cupidatat non proident</p>
                 </li>
             </ul>
-            <form action="#">
+            <form action="#" id="form">
                 <div class="form">
                     <div class="select">
                         <div class="options__container">
                             <div class="option">
-                                <input type="radio" name="type" id="type1" class="radio">
+                                <input type="radio" name="type" id="type1" value="type1" class="radio">
                                 <label for="type1">Sed ut perspiciatis</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type2" class="radio">
+                                <input type="radio" name="type" id="type2" value="type2" class="radio">
                                 <label for="type2">Nemo enim ipsam</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type3" class="radio">
+                                <input type="radio" name="type" id="type3" value="type3" class="radio">
                                 <label for="type3">Et harum quidem</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type4" class="radio">
+                                <input type="radio" name="type" id="type4" value="type4" class="radio">
                                 <label for="type4">Temporibus autem</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type5" class="radio">
+                                <input type="radio" name="type" id="type5" value="type5" class="radio">
                                 <label for="type5">Itaque earum rerum</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type6" class="radio">
+                                <input type="radio" name="type" id="type6" value="type6" class="radio">
                                 <label for="type6">6Sed ut perspiciatis</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type7" class="radio">
+                                <input type="radio" name="type" id="type7" value="type7" class="radio">
                                 <label for="type7">7Nemo enim ipsam</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type8" class="radio">
+                                <input type="radio" name="type" id="type8" value="type8" class="radio">
                                 <label for="type8">8Et harum quidem</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type9" class="radio">
+                                <input type="radio" name="type" id="type9" value="type9" class="radio">
                                 <label for="type9">9Temporibus autem</label>
                             </div>
                             <div class="option">
-                                <input type="radio" name="type" id="type10" class="radio">
+                                <input type="radio" name="type" id="type10" value="type10" class="radio">
                                 <label for="type10">10Itaque earum rerum</label>
                             </div>
                         </div>
@@ -167,8 +174,8 @@
                             </svg>    
                         </div>
                     </div>
-                    <input type="email" class="input__email" placeholder="Ваш email">
-                    <input type="name" class="input__name" placeholder="Вашe имя">
+                    <input type="email" class="input__email" name="email" placeholder="Ваш email">
+                    <input type="name" class="input__name" name="name" placeholder="Вашe имя">
                     <div class="range__container">
                         <div class="range__value">
                             <span>Sed ut perspiciatis, unde omnis iste natus</span>
@@ -184,7 +191,7 @@
                         <p>Прикрепить файл</p>
                     </label>
                 </div>
-                <button class="btn">Отправить</button>
+                <button class="btn" type="submit">Отправить</button>
             </form>
         </div>
     </section>
@@ -259,8 +266,10 @@
             </li>
         </ul>
     </footer>
+    <script src="./scripts/burgerMenu.js"></script>
     <script src="./scripts/select.js"></script>
     <script src="./scripts/range.js"></script>
+    <script src="./scripts/formData.js"></script>
 </body>
 
 </html>

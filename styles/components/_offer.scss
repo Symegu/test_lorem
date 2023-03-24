@@ -4,19 +4,18 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    height: 900px;
-    max-height: 100vh;
 
     &-info {
-        padding-top: 200px;
+        padding: 13rem 0 7rem 0;
         display: flex;
         flex-direction: column;
-        gap: 80px;
+        gap: 5rem;
 
         &__heading {
             @include main-text(700, 48px, 57.6px, #000);
             text-transform: uppercase;
-            max-width: 780px;
+            max-width: 48rem;
+            cursor: default;
 
             &-blue {
                 color: $blue;
@@ -26,26 +25,112 @@
 
         &__advantages {
             list-style-type: "-";
+            cursor: default;
 
             &__heading {
                 @include main-text(700, 20px, 24px, #000);
-                margin-bottom: 10px;
+                margin-bottom: 0.5rem;
             }
 
             &-item {
                 @include main-text(400, 20px, 24px, #000);
                 margin-bottom: 5px;
-                margin-left: 15px;
-                padding-left: 11px;
+                margin-left: 1rem;
+                padding-left: 0.5rem;
             }
         }
 
         &__actions {
+
+            & button {
+                cursor: pointer;
+            }
+
             & button:last-child {
-                margin-left: 30px;
+                margin-left: 2rem;
                 background-color: #fff;
                 color: #000;
                 border: 1px solid #6F6D7B;
+            }
+        }
+    }
+}
+
+
+
+/*tablet*/
+@media (max-width: 1250px) {
+    .offer {
+    
+        &-info {
+            padding: 10rem 0 6rem 0;
+            gap: 3rem;
+    
+            &__heading {
+                @include main-text(700, 2.5rem, 58px, #000);
+                max-width: 32rem;    
+            }
+    
+            &__advantages {
+    
+                &__heading {
+                    @include main-text(700, 1rem, 20px, #000);
+                    margin-bottom: 10px;
+                }
+    
+                &-item {
+                    @include main-text(400, 1rem, 20px, #000);
+                }
+            }
+
+            &__actions {
+                & button {
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}
+  
+/*mobile*/
+@media (max-width: 700px) {
+    .offer {
+        height: auto;
+    
+        &-info {
+            padding: 7rem 0 3rem 0;
+            gap: 2rem;
+    
+            &__heading {
+                @include main-text(700, 1.6rem, 2.2rem, #000);
+                max-width: 16rem;    
+            }
+    
+            &__advantages {
+    
+                &__heading {
+                    @include main-text(700, 0.75rem, 1rem, #000);
+                }
+    
+                &-item {
+                    @include main-text(400, 0.75rem, 1rem, #000);
+                }
+            }
+
+            &__actions {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+
+                & button {
+                    width: calc(50% - 0.5rem);
+                    padding: 1rem;
+                }
+    
+                & button:last-child {
+                    margin-left: 0;
+                }
             }
         }
     }

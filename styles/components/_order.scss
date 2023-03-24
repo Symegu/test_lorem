@@ -17,6 +17,7 @@
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 30px;
+        cursor: default;
 
         &-blue {
             color: $blue;
@@ -26,9 +27,11 @@
     &__description {
         @include main-text(400, 18px, 21px, #bbb);
         text-align: center;
+        cursor: default;
     }
 
     &__stages {
+        cursor: default;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -66,7 +69,8 @@
 
         & button {
             width: 368px;
-            @include main-text(400, 15px, 18px)
+            @include main-text(400, 15px, 18px);
+            cursor: pointer;
         }
     }
 
@@ -82,12 +86,12 @@
             @include main-text(400, 18px, 21px, #000);
             border-radius: 3px;
             border: 1px solid #FFFFFF;
+            cursor: pointer;
         }
     }
 }
 
 /*select types styles*/
-
 .select {
     display: flex;
     flex-direction: column;
@@ -176,7 +180,6 @@
 }
 
 /*range input styles*/
-
 .range {
 
     &__container {
@@ -190,6 +193,7 @@
         justify-content: space-between;
         @include main-text(400, 18px, 21px);
         padding-bottom: 8px;
+        cursor: default;
     }
 }
 
@@ -200,6 +204,7 @@
     border: 1px solid #FFFFFF;
     -webkit-appearance: none;
     border-radius: 5px;
+    cursor: pointer;
 
     &::-webkit-slider-thumb {
         cursor: pointer;
@@ -213,7 +218,6 @@
 }
 
 /*file input styles*/
-
 .input__file {
     display: none;
 
@@ -231,8 +235,209 @@
         @include main-text(600, 15px, 18px,#272733);
         text-transform: uppercase;
 
+        cursor: pointer;
+
         & svg {
             margin-right: 10px;
+        }
+    }
+}
+
+
+/*tablet*/
+@media (max-width: 1280px) {
+    .order {
+    
+        &-wrap {
+            padding: 6rem 0;
+            gap: 3rem;
+        }
+    
+        &__heading {
+            @include main-text(700, 1.7rem, 43px, #fff);
+            margin-bottom: 1rem;
+        }
+    
+        &__description {
+            @include main-text(400, 1rem, 21px, #bbb);
+        }
+    
+        &__stages {
+    
+            &-item {
+                width: 138px;
+                gap: 0.75rem;
+
+                & svg {
+                    width: 80px;
+                    height: auto;
+                }
+    
+                & p {
+                    @include main-text(400, 0.75rem, 1rem);
+                    padding: 0 7px;
+                }
+    
+                &:not(:last-of-type):before {
+                    content: "...";
+                    letter-spacing: 0.7rem;
+                    font-size: 1.8rem;
+                    top: 1rem;
+                    left: 85%;
+                }
+            }
+        }
+    
+        & form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+    
+            & button {
+                width: 45%;
+                @include main-text(400, 0.8rem, 1rem);
+                cursor: pointer;
+            }
+        }
+    
+        .form {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+    
+            & input:not([type="range"]) {
+                background-color: #FFFFFFD9;
+                padding: 10px;
+                @include main-text(400, 0.75rem, 1rem, #000);
+            }
+        }
+
+        .input__email::placeholder, .input__name::placeholder {
+            @include main-text(400, 0.75rem, 1rem,#272733);
+        }
+
+        /*select types styles*/
+        .select {
+
+            &__option {
+                padding: 10px;
+                @include main-text(400, 0.75rem, 1rem, #272733);
+            }
+
+            .option {
+                padding: 10px;
+                @include main-text(400, 0.75rem, 1rem);
+            }
+        }
+
+        /*options box styles*/
+        .options__container {
+            top: 35px;
+
+            &.active {
+                max-height: 7rem;
+            }
+        }
+
+        /*range input styles*/
+        .range {
+
+            &__value {
+                @include main-text(400, 0.75rem, 1rem);
+            }
+        }
+
+        /*file input styles*/
+        .input__file {
+
+            &__label {
+                @include main-text(600,  0.75rem, 1rem,#272733);
+            }
+        }
+    }
+}
+  
+/*mobile*/
+@media (max-width: 700px) {
+    .order {
+    
+        &-wrap {
+            padding: 4rem 0;
+            gap: 2rem;
+        }
+    
+        &__heading {
+            @include main-text(700, 1.6rem, 2.5rem, #fff);
+            margin-bottom: 0.5rem;
+        }
+    
+        &__description {
+            @include main-text(400, 0.75rem, 1rem, #bbb);
+        }
+    
+        &__stages {
+            flex-direction: column;
+            gap: 2rem;
+    
+            &-item {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2rem;
+                position: relative;
+    
+                & p {
+                    @include main-text(400, 0.75rem, 1rem);
+                    text-align: start;
+                    max-width: 10rem;
+                }
+
+                & svg {
+                    width: 4rem;
+                    height: auto;
+                }
+    
+                &:not(:last-of-type):before {
+                    content: "...";
+                    letter-spacing: 0.3rem;
+                    font-size: 1.5rem;
+                    top: 4.2rem;
+                    left: 1.6rem;
+                    transform: rotateZ(90deg);
+                    z-index: 10;
+                }
+            }
+        }
+    
+        & form {
+            gap: 1.5rem;
+    
+            & button {
+                width: 100%;
+                @include main-text(400, 0.75rem, 1rem);
+            }
+        }
+    
+        .form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+    
+            & input:not([type="range"]) {
+                padding: 10px;
+                @include main-text(400, 0.75rem, 1rem, #000);
+            }
+        }
+
+        .input__file {
+
+            &__label {
+                @include main-text(600,  0.75rem, 1rem,#272733);
+                padding: 6.5px;
+            }
         }
     }
 }

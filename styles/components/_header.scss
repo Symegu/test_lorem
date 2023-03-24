@@ -4,13 +4,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 200;
 }
 
 .header-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px 0;
+    padding: 2rem 0;
 }
 
 .breadcrumbs {
@@ -18,10 +19,116 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 3.75rem;
     &-item {
         @include main-text(600);
         color: #fff;
         text-transform: uppercase;
     }
+}
+
+.navbar__burger {
+    display: none;
+}
+
+
+/*tablet*/
+@media (max-width: 1250px) {
+
+  .navbar__burger {
+      display: none;
+  }
+
+    .logo svg {
+        width: 12.5rem;
+    }
+    
+    .header-wrap {
+        padding: 1.3rem 0;
+    }
+    
+    .breadcrumbs {
+        gap: 2rem;
+        padding-right: 0.5rem;
+    }
+}
+  
+/*mobile*/
+@media (max-width: 700px) {
+
+    .logo svg {
+        width: 10rem;
+    }
+    
+    .header-wrap {
+        padding: 1rem 0;
+    }
+    
+    .navbar__burger {
+        display: flex;
+        align-items: center;
+
+        &__field {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    }
+    
+      .bar {
+        display: block;
+        width: 1.2rem;
+        height: 2px;
+        margin: 3px auto;
+        background-color: #eee;
+        transition: 0.3s;
+      }
+    
+      .breadcrumbs {
+        position: fixed;
+        top: 69px;
+        bottom: 100%;
+        right: 0;
+        width: 100%;
+        background-color:  $black;
+        z-index: 100;
+        display: flex;
+        transition: 0.4s;
+        flex-direction: column;
+        align-items: center;
+        
+        overflow: auto;
+      }
+    
+      .breadcrumbs.open {
+        top: 69px;
+        bottom: auto;
+        padding: 2rem 0;
+      }
+    
+      .breadcrumbs > li > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+
+        &:hover {
+            color: $blue;
+        }
+      }
+    
+      .navbar__burger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .navbar__burger.active .bar:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+    
+      .navbar__burger.active .bar:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    
+      body.noscroll {
+        overflow: hidden;
+      }
 }
