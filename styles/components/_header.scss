@@ -19,7 +19,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3.75rem;
+    gap: 3.5rem;
     &-item {
         @include main-text(600);
         color: #fff;
@@ -33,7 +33,7 @@ header {
 
 
 /*tablet*/
-@media (max-width: 1250px) {
+@media (max-width: 1280px) {
 
   .navbar__burger {
       display: none;
